@@ -1,0 +1,222 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{%load static%}
+  <!-- Main hero banner -->
+  <section id="home" class="left jumbotron"> 
+    <div class="intro"> 
+        <div class="headings"> 
+            <h3 class="greet-heading">Hi, I'm</h3> 
+            <h3 class="my-heading"> Priyanka</h3> 
+            <h3 class="sub-heading"> 
+                Software Engineer
+            </h3> 
+        </div> 
+        <div class="intro-buttons"> 
+            <a  href='https://github.com/Learnforfun-dev/Django3-password-generator'><button class="btn common-btn">Github</button> </a>
+            <a href= {%static 'portfolio/Priyanka_joshi_cv.pdf'%}><button class="btn ghost-btn" >Resume</button> </a>
+        </div> 
+    </div> 
+    <div class="right"> 
+      <img  src={%static 'portfolio/priyankaDP-2-removebg-preview.png'%} >
+    </div>
+  </section> 
+
+<!-- Portfolio Section -->
+<div>
+		<section class="portfolio" id="portfolio"> 
+		<div class="portfolio-heading"> 
+			<h1 class="my-heading text-center">Featured Projects</h1> 
+		</div> 
+		<div class="portfolio-content"> 
+			<div class="my-row"> 
+        {%for project in projects%}
+				<div class="my-col "> 
+					<div class="my-card port-card zoom"> 
+						<div class="image"> 
+              <img src={{project.image.url}} width="304" height="236">
+						</div> 
+						<h3 class="greet-heading">{{project.title}}</h3> 
+						<p class="small-para">{{project.description}}</p> 
+            <!--<a href={% url 'all_blogs'%}>Blogs</a>-->
+
+					</div> 
+				</div> 
+        {%endfor%}
+      </div>
+    </section>
+  </div>
+
+       <!-- About Section -->
+      <section id="about" class="about"> 
+      <div class="about-heading"> 
+          <h1 class="my-heading text-center">About Me</h1> 
+      </div>
+      <div class= "about-about">
+          <div class="lead-para"> 
+            <h3>Hello</h3>
+            Hard working software engineering student from Zenica in my third and final year. 
+            I'm also a former Pharmacy technician and a future full stack developer.
+            I’ve found my passion in web development. I love spending time coding and encountering new challenges.
+            I’m highly adaptable to new challenges and projects. 
+            I'm a Junior Scholar at Bosnia and Herzegovina Futures foundation and that is the best thing that happened to me.
+          </div> 
+          <div class="about-image"> 
+            <img src="{%static 'portfolio/AboutMe.jpg'%}" alt="About Image" width='80%' height='100%'> 
+        </div> 
+      </div> 
+  </section> 
+
+   <!-- Skill Section -->
+   <section class="services" id="services"> 
+    <div class="services-heading"> 
+        <h1 class="my-heading text-center">My Skills</h1> 
+    </div> 
+    <div class="services-content"> 
+        <div class="my-row"> 
+            <div class="my-col"> 
+                <div class="my-card skill"> 
+                    <div class="icon"> 
+                      <img src={%static 'portfolio/python.jpeg'%}>
+                    </div> 
+                    <h3 class="greet-heading ">Python</h3> 
+                    <p class="small-para"> 
+                      Python, a dynamic language, powers applications from scripting to AI. 
+                      With Django and Flask, it excels in web design, server-side scripting, and database management. 
+                      Backed by rich libraries, Python is a go-to for dynamic web solutions.
+                </div> 
+            </div> 
+            <div class="my-col"> 
+              <div class="my-card skill"> 
+                  <div class="icon"> 
+                    <img src={%static 'portfolio/angular.png'%}>
+                  </div> 
+                  <h5 class="greet-heading">Angular</h5> 
+                  <p class="small-para"> 
+                    Angular, a leading front-end framework, streamlines web development with robust features and versatility. 
+                    Offering seamless data binding and modular architecture, it empowers efficient development of dynamic single-page applications.
+                  </p> 
+              </div> 
+          </div> 
+          <div class="my-col"> 
+            <div class="my-card skill"> 
+                <div class="icon"> 
+                  <img src={%static 'portfolio/csharp.png'%}>
+                </div> 
+                <h3 class="greet-heading">C#</h3> 
+                <p class="small-para"> 
+                  C#, within .NET, drives desktop, web, and mobile apps. Robust features and seamless 
+                  .NET integration empower efficient software solutions across platforms, solidifying 
+                  C#'s position as a versatile language for developers. 
+                </p> 
+            </div> 
+        </div> 
+        <div class="my-col"> 
+          <div class="my-card skill"> 
+              <div class="icon"> 
+                <img src={%static 'portfolio/javascript.jpg'%}>
+              </div> 
+              <h3 class="greet-heading">Javascript</h3> 
+              <p class="small-para"> 
+                Javascript, is a web interactivity, powers dynamic functionality from front-end to server-side. 
+                Versatile frameworks like React, Vue.js, and Node.js exemplify its adaptability, with constant evolution and vast ecosystem.
+              </p> 
+          </div> 
+      </div> 
+      <div class="my-col"> 
+        <div class="my-card skill"> 
+            <div class="icon"> 
+              <img src={%static 'portfolio/java.png'%}>
+            </div> 
+            <h3 class="greet-heading">Java</h3> 
+            <p class="small-para"> 
+              Java, renowned for platform independence, powers enterprise software and mobile apps globally. Utilizing object-oriented principles and the Java Virtual Machine,
+               it ensures robustness and scalability across platforms, cementing its status as versatile.
+            </p> 
+        </div> 
+    </div> 
+    <div class="my-col"> 
+      <div class="my-card skill"> 
+          <div class="icon"> 
+            <img src={%static 'portfolio/mysql.png'%}>
+          </div> 
+          <h3 class="greet-heading">My SQL</h3> 
+          <p class="small-para"> 
+            MySQL, a renowned open-source RDBMS, provides reliable, high-performance data storage for diverse applications. 
+            With ease of use and versatility,
+            it powers dynamic web apps, CMS, and enterprise solutions globally. 
+          </p> 
+      </div> 
+  </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact me section -->
+    <section class="contact" id="contact"> 
+      <div class="contact-heading"> 
+          <h1 class="my-heading text-center">Contact Me</h1> 
+      </div> 
+      <div class="contact-content"> 
+          <div class="contact-form-container"> 
+              <h1 class="greet-heading"><u>Get In Touch</u></h1> 
+              <form class="contact-form" method="post"> 
+                {% csrf_token %}
+                  <input class="form-controls" type="text" id="usName"
+                         placeholder="Your Name"> 
+                  <input class="form-controls" type="text" id="emailId"
+                         placeholder="Your Email"> 
+                  <input class="form-controls" type="text" id="phoneId"
+                         placeholder="Your Phone"> 
+                  <textarea class="form-controls" 
+                            placeholder="Write your message" 
+                            name="message" id="messageId" cols="30"
+                            rows="10"> 
+                    </textarea> 
+                  <input class="form-btn btn common-btn" 
+                         type="submit" onclick="sendMessage()" value="Send Message"> 
+              </form> 
+          </div> 
+          <div class="contact-details"> 
+              <h1 class="greet-heading"><u>My Contact Details</u></h1> 
+              <div class="details"> 
+                  <h5 class="contact-heading">EMAIL</h5> 
+                  <p class="contact-text">priyanka.joshi852@gmail.com</p> 
+              </div> 
+              <div class="details"> 
+                  <h5 class="contact-heading">PHONE</h5> 
+                  <p class="contact-text">+49 15510860116</p> 
+              </div> 
+              <div class="details"> 
+                  <h5 class="contact-heading">ADDRESS</h5> 
+                  <p class="contact-text">Bremen, Germany</p> 
+                  <p>1530</p> 
+                  <p>Luisental, 28</p> 
+              </div> 
+          </div> 
+      </div> 
+  </section>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
+  <script type="text/javascript">
+      function sendEmail() {
+          Email.send({
+              Host: "smtp.gmail.com",
+              Username: "prijoshi517@gamil.com",
+              Password: "Enter your password",
+              To: 'priyanka.joshi852@gmail.com',
+              From: "sender@email_address.com",
+              Subject: "Sending Email using javascript",
+              Body: "Well that was easy!!",
+          })
+              .then(function (message) {
+                  alert("mail sent successfully")
+              });
+      }
+  </script>
+
+{% endblock %}
+
+

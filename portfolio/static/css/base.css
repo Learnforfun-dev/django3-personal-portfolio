@@ -1,0 +1,44 @@
+body{
+  background-color:rgb(31, 17, 44);
+  color: white;
+
+}
+/*body {
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(circle at top right, rgba(25, 18, 37, 0.952),       transparent),
+      radial-gradient(circle at 10% 90%, rgba(17, 16, 63, 0.932), transparent)
+  }*/
+
+.navbar-brand {
+    float: center;
+    width: 250px;
+    height: 100px;
+    padding: 4rem 3rem;
+
+}
+  canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right:0;
+  }
+.navbar{
+  background-color: #29183f !important;
+  text-align: right;
+}
+.mr-auto, .mx-auto {
+  margin: auto !important;
+  display: flex !important;
+}
+/*a{
+  color: white !important;
+}*/
+ul{
+  padding: 1%;
+  margin-left: 10px;
+}
+  
+
+

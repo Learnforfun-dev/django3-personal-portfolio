@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0"> 
+	<title>My Portfolio</title> 
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity= "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- Bootstrap CSS -->
+    {%load static%}
+    <link rel="stylesheet" href={%static "css/base.css" %}>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    -->
+    <link href={%static "css/home.css"%} rel="stylesheet">
+    <!--<img class="navbar-brand navbar-expand-lg" src={% static "portfolio/logo-no-background.png"%} >-->
+	<!--<link rel="stylesheet" href="responsive.css">--> 
+</head> 
+  <body>
+<!-- Navbar header section -->
+<header class="header"> 
+  <nav class="navbar"> 
+    <div class="logo"> 
+      {%load static%}
+      <img class="logo-heading" src={% static "portfolio/logo-no-background.png"%} >
+    </div> 
+    <div class="hamburger" id="hamburger"> 
+      <i class="fas fa-bars hamburger-icon"></i> 
+      <i class="fas fa-times cross-icon"></i> 
+    </div> 
+    <div class="menu"> 
+      <ul class="menu-list"> 
+        <li class="menu-list-items"> 
+          <a class="links" href="#home"> 
+            Home 
+          </a> 
+        </li> 
+        <li class="menu-list-items"> 
+          <a class="links" href="#portfolio"> 
+            Projects 
+          </a> 
+        </li> 
+        <li class="menu-list-items"> 
+          <a class="links" href="#about"> 
+            About 
+          </a> 
+        </li> 
+        <li class="menu-list-items"> 
+          <a class="links" href="#services"> 
+            Skills 
+          </a> 
+        </li> 
+        <li class="menu-list-items"> 
+          <a class="links" href="#contact"> 
+            Contact 
+          </a> 
+        </li> 
+      </ul> 
+    </div> 
+  </nav> 
+</header> 
+{% block content %}  
+{% endblock %}
+ <!-- Footer section -->
+ <footer class="footer"> 
+  <div class="footer-content text-center"> 
+      <h4> 
+          Copyright © 2023 All rights reserved. 
+      </h4> 
+      <div class="social-links"> 
+          <div class="footer-menu"> 
+              <ul class="footer-menu-list"> 
+                  <li class="footer-list-items"> 
+                      <a class="footer-links" href="#"> 
+                          <i class="fab fa-facebook-f"></i> 
+                      </a> 
+                  </li> 
+                  <li class="footer-list-items"> 
+                      <a class="footer-links" href="#"> 
+                          <i class="fab fa-twitter"></i> 
+                      </a> 
+                  </li> 
+                  <li class="footer-list-items"> 
+                      <a class="footer-links" href="#"> 
+                          <i class="fab fa-instagram"></i> 
+                      </a> 
+                  </li> 
+                  <li class="footer-list-items"> 
+                      <a class="footer-links" href="https://www.linkedin.com/in/priyanka-joshi-3b1737113/"> 
+                          <i class="fab fa-linkedin-in"></i> 
+                      </a> 
+                  </li> 
+              </ul> 
+          </div> 
+      </div> 
+  </div> 
+</footer> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src= {%static 'js/home.js' %} ></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
